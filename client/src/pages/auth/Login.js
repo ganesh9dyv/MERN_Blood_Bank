@@ -1,23 +1,16 @@
 import React from 'react'
-import InputType from '../../components/shared/Form/InputType'
+import Form1 from '../../components/shared/Form/Form'
+// import InputType from '../../components/shared/Form/InputType'
 
 const login = () => {
   return (
     <>
-    <div className='row'>
+    <div className='row g-0'>
         <div className='col-md-8 form-banner'> 
             <img src='./assets/images/banner1.jpg' alt="LoginImage"/> 
         </div>
         <div className='col-md-4 form-container'> 
-   <form>
-    <InputType labelText={'E-Mail'} labelFor={'EMail'} inputType={'email'} name={'email'}/>
-    <InputType labelText={'Password'} labelFor={'Password'} inputType={'password'} name={'emailpassword'}/>
-  
-    
-  
-  <button type="submit" className="btn btn-primary">Submit</button>
-</form>
-
+            <Form1 formTitle={'Login'} submitBtn={"Login"} formType={"login"}/>
         </div>
     </div>
     </>
