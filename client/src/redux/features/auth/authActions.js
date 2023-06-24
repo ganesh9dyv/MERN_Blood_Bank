@@ -13,8 +13,7 @@ export const userLogin=createAsyncThunk(
                 toast.success(data.message);
                 window.location.replace('/');
             }return data;
-        }catch(error){
-            console.log(error);
+        }catch(error){ 
             if(error.response && error.response.data.message){
                 return rejectWithValue(error.response.data.message);
             }else{
@@ -64,4 +63,4 @@ export const getCurrentUser=createAsyncThunk(
             }
         }
     }
-)
+);
