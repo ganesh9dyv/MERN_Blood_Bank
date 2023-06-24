@@ -21,7 +21,10 @@ const Header = () => {
                 </div>
                 <ul className='navbar-nav flex-row'>
                     <li className='nav-item mx-3'>
-                        <p className='nav-link'><BiUserCircle/>WelCome {user?.name} !</p>
+                        <p className='nav-link'>
+                            <BiUserCircle/>WelCome {user?.name || user?.hospitalName || user?.organisationName} &nbsp; 
+                            <span className="badge bg-secondary">{user?.role}</span>
+                        </p>
                     </li>
                     <li className='nav-item mx-3'>
                         <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
