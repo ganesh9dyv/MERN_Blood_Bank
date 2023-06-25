@@ -7,14 +7,14 @@ const Modal = () => {
     const [inventoryType,setInventoryType]=useState("in")
     const [bloodGroup,setBloodGroup]=useState("")
     const [quantity,setQuantity]=useState(0)
-    const [donarEmail,setDonarEmail]=useState("")
+    const [email,setDonarEmail]=useState("")
     const {user}=useSelector(state=>state.auth);
     // handle model data
     const handleModelSubmit=async ()=>{
         try{
             if(!bloodGroup || !quantity) return alert("Please Provide all fields");
             const {data}= await API.post('/inventory/create-inventory',{
-                donarEmail,email:user?.email,
+                email,
                 organisation:user?._id, inventoryType,bloodGroup,quantity
             })
             if(data?.success){
@@ -23,6 +23,7 @@ const Modal = () => {
             }
             
         }catch(error){
+            alert(error.response.data.message);
             window.location.reload()
             console.log(error);
         }
@@ -52,13 +53,13 @@ const Modal = () => {
             <input type='radio' name='inRadio'
             value={'out'}
             onChange={(e)=>setInventoryType(e.target.value)}
-            defaultChecked  className='form-check-input'
+            className='form-check-input'
         />
         <label htmlFor='out' className='form-check-label'>OUT</label>
         </div>
         </div>
         <select className="form-select" aria-label="Default select example" onChange={(e)=>setBloodGroup(e.target.value)}>
-  <option selected>Select Blood Group</option>
+  <option defaultValue={'O+'}>Select Blood Group</option>
   <option value={'O+'}>O+</option>
   <option value={'O-'}>O-</option>
   <option value={'AB+'}>AB+</option>
@@ -68,10 +69,10 @@ const Modal = () => {
   <option value={'B+'}>B+</option>
   <option value={'B-'}>B-</option>
 </select>
-    <InputType labelText={'Donar Email'}
-    labelFor={'donarEmail'}
+    <InputType labelText={'Email'}
+    labelFor={'email'}
     InputType={'email'}
-    value={donarEmail}
+    value={email}
     onChange={(e)=>setDonarEmail(e.target.value)}
     />
     <InputType labelText={'Quantity (ml)'}
