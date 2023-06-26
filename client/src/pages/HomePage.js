@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Spinner from '../components/shared/Spinner';
 import { toast } from 'react-toastify';
 import Layout from '../components/shared/Layout/Layout';
@@ -8,8 +9,9 @@ import API from '../services/API';
 import moment from 'moment'
 
 const HomePage = () => {
-  const { loading, error } = useSelector(state=>state.auth);
+  const { loading, error ,user} = useSelector(state=>state.auth);
   const [data,setData]=useState([])
+  const navigate =useNavigate()
   // get function 
   const getBloodRecords= async()=>{
     try{
@@ -27,6 +29,7 @@ const HomePage = () => {
   },[])
   return (
     <Layout>
+      {user?.role==='admin' && navigate('/admin')}
     {error && <span>{toast.error(error)}</span>}
     {loading ? (<Spinner/>):(<>
       <h4 className='ms-4' data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{cursor:'pointer'}}>
