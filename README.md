@@ -74,4 +74,30 @@ After clicking Logout token in localStorage get clear and new user can login
 
 
 
+To add new Inventory
+Click on + icon 
+![image](https://github.com/ganesh9dyv/MERN_Blood_Bank/assets/116238331/d84fbc03-5e03-4c54-8be7-057d6dcd2869)
+
+Fill the form based on what user is donar or Needy
+![image](https://github.com/ganesh9dyv/MERN_Blood_Bank/assets/116238331/394536da-87f2-4594-b247-1132ad1004cb)
+
+![image](https://github.com/ganesh9dyv/MERN_Blood_Bank/assets/116238331/98f4d2d0-9d37-4156-bb23-d43215cd38fc)
+
+To use blood
+
+![image](https://github.com/ganesh9dyv/MERN_Blood_Bank/assets/116238331/7538c6f4-b6d2-43a8-8495-444a885331ee)
+
+![image](https://github.com/ganesh9dyv/MERN_Blood_Bank/assets/116238331/ce6f2a9b-4fa2-4737-83fd-f9f7db6f2cb9)
+
+![image](https://github.com/ganesh9dyv/MERN_Blood_Bank/assets/116238331/f9f36286-e9a1-475d-a262-2c94752a4945)
+
+
+         Thank You!!!
+![samuel-regan-asante-JjlkGAc4OUM-unsplash](https://github.com/ganesh9dyv/MERN_Blood_Bank/assets/116238331/28c8d776-180d-47d0-9106-52044a886309)
+
+
+
+
+
+
 
