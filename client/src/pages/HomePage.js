@@ -42,7 +42,7 @@ const HomePage = () => {
           <tr>
             <th scope="col">Blood Group</th>
             <th scope="col">Inventory Type</th>
-            <th scope="col">Quantity</th>
+            <th scope="col">Quantity(ml)</th>
             <th scope="col">Donar Email</th>
             <th scope="col">Date & Time</th>
           </tr>
